@@ -22,12 +22,13 @@ P = [101, 102, 103, 104, 105, 106]
 Q = [104, 105, 106, 107, 108]
 R = [102, 105, 109] 
 """
+"""
 #DECLARAMOS VARIABLES   
 A = [101, 102, 103, 104, 105, 106]
 B = [104, 105, 106, 107, 108]
 C = [102, 105, 109]
 
-# USAMOS FUINCION PARA CLASIFICAR USUARIOS CRITICOS Y NO CRITICOS
+# USAMOS FUNCION PARA CLASIFICAR USUARIOS CRITICOS Y NO CRITICOS
 def clasificar_usuario(A,B,C):
     usuarios_al_menos_una_plataforma = []
     for usuario in A:
@@ -46,6 +47,38 @@ def clasificar_usuario(A,B,C):
         else:
             print(u, "-> No crítico")
 # LLAMAMOS FUNCION
-clasificar_usuario(A,B,C)
+clasificar_usuario(A,B,C)"""
 
+#Creamos las funciones matemáticas:
+def A(x):
+    return 40 * x + 200
+
+def B(x):
+    return 70 * x + 50
+
+def C(x):
+    return -2 * x**2 + 80 * x + 100
+
+#Evaluamos funciones
+x = [0, 5, 10, 15, 20, 25, 30, 40, 50]
+for val in x:
+    print(f"x={val}: A(x)={A(val)}, B(x)={B(val)}, C(x)={C(val)}")      
+
+#8. Crear una función en python que determine el plan más económico para un valor de x
+def plan_mas_economico(x):
+    costo_A = A(x)
+    costo_B = B(x)
+    costo_C = C(x)
+    plan_economico = "A"
+    costo_minimo = costo_A
+    if costo_B < costo_minimo:
+        plan_economico = "B"
+        costo_minimo = costo_B
+    if costo_C < costo_minimo:
+        plan_economico = "C"
+        costo_minimo = costo_C
+    return plan_economico, costo_minimo
+for val in x:
+    plan, costo = plan_mas_economico(val)
+    print(f"x={val}: Plan más económico: {plan} con costo {costo}")
 
