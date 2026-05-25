@@ -1,4 +1,29 @@
 # SE CREAR EL ARCHIVO, LISTO PARA SER USADO EN EL PROYECTO
+"""Trabajo practico integrador carrera de programacion ciclo 2026 UTN FRVM
+Participantes:
+Leiva, Santiago
+Ponce, Matias
+Ferrero, Caren
+Maldonado, Natasha
+Molina, Alejo
+Maffeis, Axel
+"""
+
+"""
+Parte B — Lógica proposicional
+Definir:
+• 𝑝: pertenece a A
+• 𝑞: pertenece a B
+• 𝑟: pertenece a C
+Se define usuario crítico:
+(𝑝 ∨ 𝑞) ∧ 𝑟
+Construir la tabla de verdad.
+Implementar una función en Python que evalúe la expresión.
+Clasificar los usuarios del dataset en:
+o Críticos
+o No críticos
+
+"""
 #CONSIGNA 1: PARTE B
 #DECLARAMOS VARIABLES   
 A = [101, 102, 103, 104, 105, 106]
@@ -27,6 +52,16 @@ def clasificar_usuario(A,B,C):
 print("#CONSIGNA 1: PARTE B")
 print("CLASIFICACIÓN DE USUARIOS:")
 clasificar_usuario(A,B,C)
+
+"""
+Parte B — Implementación
+Programar las funciones en Python.
+Evaluar las funciones para los valores:
+x = [0, 5, 10, 15, 20, 25, 30, 40, 50]
+Crear una función que determine el plan más económico para un valor de x.
+
+"""
+
 #CONSIGNA 2: PARTE B
 print("#CONSIGNA 2: PARTE B")
 #Creamos las funciones matemáticas:
@@ -65,6 +100,16 @@ for val in x:
     plan, costo = plan_mas_economico(val)
     print(f"x={val}: Plan más económico: {plan} con costo {costo}")
 
+
+
+"""
+Parte B — Implementación en Python
+Calcular:
+o El tiempo promedio de ejecución por función
+o El tiempo promedio de ejecución por servidor
+Calcular la matriz transpuesta de M y explicar qué representa en este contexto.
+
+"""
 # CONSIGNA 3: PARTE B
 print("#CONSIGNA 3: PARTE B")
 M = [
@@ -95,8 +140,16 @@ for j in range(len(M[0])):
     promedio = suma / contador
     print("Servidor", j+1, "-> Promedio:", promedio, "ms")
 
-#4. Calcular la matriz transpuesta de M y explicar qué representa en este contexto.
+#Calcular la matriz transpuesta de M y explicar qué representa en este contexto.
 M_transpuesta = [[M[i][j] for i in range(len(M))] for j in range(len(M[0]))]
 print("Matriz transpuesta de M:")
 for fila in M_transpuesta:
     print(fila)
+
+ """En este contexto me cambia el lugar las funciones y servidores
+Alojando las funciones en la columna A, columna B y columna C, como también el lugar de servidores que pasarían a estar en Fila 1 = servidor 1 , Fila 2=servidor 2, Fila 3 =servidor 3."""
+
+
+#Se realizo en discord con todos los participantes conectados, implementado los commit y push correspondientes, para que quede registrado el avance del proyecto en el repositorio de GitHub.
+#FIN DEL PROYECTO
+
