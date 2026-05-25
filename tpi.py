@@ -48,7 +48,7 @@ def clasificar_usuario(A,B,C):
             print(u, "-> No crítico")
 # LLAMAMOS FUNCION
 clasificar_usuario(A,B,C)"""
-
+"""
 #Creamos las funciones matemáticas:
 def A(x):
     return 40 * x + 200
@@ -81,4 +81,36 @@ def plan_mas_economico(x):
 for val in x:
     plan, costo = plan_mas_economico(val)
     print(f"x={val}: Plan más económico: {plan} con costo {costo}")
+"""
 
+M = [
+    [120, 150, 100],   # Función 1
+    [200, 180, 220],   # Función 2
+    [90, 110, 95]      # Función 3
+]
+
+#Calcular promedio por función (filas)
+for i in range(len(M)):  
+    suma = 0
+    contador = 0
+    for j in range(len(M[i])):  
+        suma = suma + M[i][j]
+        contador = contador + 1
+    promedio = suma / contador
+    print("Función", i+1, "-> Promedio:", promedio, "ms")
+
+#Calcular promedio por servidor (columnas)
+for j in range(len(M[0])):  
+    suma = 0
+    contador = 0
+    for i in range(len(M)):  
+        suma = suma + M[i][j]
+        contador = contador + 1
+    promedio = suma / contador
+    print("Servidor", j+1, "-> Promedio:", promedio, "ms")
+
+#4. Calcular la matriz transpuesta de M y explicar qué representa en este contexto.
+M_transpuesta = [[M[i][j] for i in range(len(M))] for j in range(len(M[0]))]
+print("Matriz transpuesta de M:")
+for fila in M_transpuesta:
+    print(fila)
