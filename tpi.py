@@ -1,28 +1,5 @@
 # SE CREAR EL ARCHIVO, LISTO PARA SER USADO EN EL PROYECTO
-"""Se dispone de los siguientes datos:
-A = [101, 102, 103, 104, 105, 106]
-B = [104, 105, 106, 107, 108]
-C = [102, 105, 109]
-donde:
-• A: usuarios que acceden a través de la API
-• B: usuarios que acceden a través de la web
-• C: usuarios que han generado errores
-Definir:
-• 𝑝: pertenece a A
-• 𝑞: pertenece a B
-• 𝑟: pertenece a C
-Se define usuario crítico:
-(𝑝 ∨𝑞)∧𝑟
-6. Implementar una función en Python que evalúe la expresión.   
-
-A = [101, 102, 103, 104, 105, 106]
-B = [104, 105, 106, 107, 108]
-C = [102, 105, 109]
-P = [101, 102, 103, 104, 105, 106]
-Q = [104, 105, 106, 107, 108]
-R = [102, 105, 109] 
-"""
-"""
+#CONSIGNA 1: PARTE B
 #DECLARAMOS VARIABLES   
 A = [101, 102, 103, 104, 105, 106]
 B = [104, 105, 106, 107, 108]
@@ -47,8 +24,11 @@ def clasificar_usuario(A,B,C):
         else:
             print(u, "-> No crítico")
 # LLAMAMOS FUNCION
-clasificar_usuario(A,B,C)"""
-"""
+print("#CONSIGNA 1: PARTE B")
+print("CLASIFICACIÓN DE USUARIOS:")
+clasificar_usuario(A,B,C)
+#CONSIGNA 2: PARTE B
+print("#CONSIGNA 2: PARTE B")
 #Creamos las funciones matemáticas:
 def A(x):
     return 40 * x + 200
@@ -60,11 +40,14 @@ def C(x):
     return -2 * x**2 + 80 * x + 100
 
 #Evaluamos funciones
+print("Evaluación de funciones para diferentes valores de x:")
+
 x = [0, 5, 10, 15, 20, 25, 30, 40, 50]
 for val in x:
     print(f"x={val}: A(x)={A(val)}, B(x)={B(val)}, C(x)={C(val)}")      
 
 #8. Crear una función en python que determine el plan más económico para un valor de x
+print("Plan más económico:")
 def plan_mas_economico(x):
     costo_A = A(x)
     costo_B = B(x)
@@ -81,8 +64,9 @@ def plan_mas_economico(x):
 for val in x:
     plan, costo = plan_mas_economico(val)
     print(f"x={val}: Plan más económico: {plan} con costo {costo}")
-"""
 
+# CONSIGNA 3: PARTE B
+print("#CONSIGNA 3: PARTE B")
 M = [
     [120, 150, 100],   # Función 1
     [200, 180, 220],   # Función 2
@@ -90,6 +74,7 @@ M = [
 ]
 
 #Calcular promedio por función (filas)
+print("Promedio por función:")
 for i in range(len(M)):  
     suma = 0
     contador = 0
@@ -100,6 +85,7 @@ for i in range(len(M)):
     print("Función", i+1, "-> Promedio:", promedio, "ms")
 
 #Calcular promedio por servidor (columnas)
+print("Promedio por servidor:")
 for j in range(len(M[0])):  
     suma = 0
     contador = 0
